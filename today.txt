@@ -1,0 +1,391 @@
+
+WEB TECHNOLOGY PRACTICALS (1–9)
+WITH PROBLEM STATEMENTS AND SOLUTIONS
+
+==================================================
+EXPERIMENT 1
+PROBLEM:
+Create a basic HTML page with headings and paragraphs.
+
+SOLUTION:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Basic Page</title>
+</head>
+<body>
+<h1>Main Heading</h1>
+<h2>Sub Heading</h2>
+<p>This is the first paragraph.</p>
+<p>This is the second paragraph.</p>
+</body>
+</html>
+
+==================================================
+EXPERIMENT 2
+PROBLEM:
+Create a basic HTML page with images and links.
+
+SOLUTION:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+</head>
+<body>
+
+    <h1>Welcome to My Website</h1>
+
+    <p>This is a simple HTML page containing a heading, an image, and a link.</p>
+
+    <!-- Image -->
+    <img src="https://via.placeholder.com/300" alt="Sample Image" width="300">
+
+    <p>Click the link below to visit Google:</p>
+
+    <!-- Link -->
+    <a href="https://www.google.com" target="_blank">Visit Google</a>
+
+</body>
+</html>
+==================================================
+EXPERIMENT 3
+PROBLEM:
+Design a student feedback form using HTML5 form elements including text input, email input, dropdown list, text area and submit button with proper validation. 
+SOLUTION:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Feedback Form</title>
+</head>
+<body>
+
+    <h1>Student Feedback Form</h1>
+
+    <form action="#" method="post">
+
+        <!-- Student Name -->
+        <label for="name">Student Name:</label><br>
+        <input type="text" id="name" name="name"
+               placeholder="Enter your name"
+               required minlength="3"><br><br>
+
+        <!-- Email -->
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email"
+               placeholder="example@gmail.com"
+               required><br><br>
+
+        <!-- Course Dropdown -->
+        <label for="course">Select Course:</label><br>
+        <select id="course" name="course" required>
+            <option value="">--Select Course--</option>
+            <option value="BCA">BCA</option>
+            <option value="BSc IT">BSc IT</option>
+            <option value="Computer Engineering">Computer Engineering</option>
+            <option value="Cyber Security">Cyber Security</option>
+        </select><br><br>
+
+        <!-- Feedback -->
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback"
+                  rows="5" cols="40"
+                  placeholder="Enter your feedback here..."
+                  required></textarea><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Feedback">
+
+    </form>
+
+</body>
+</html>
+==================================================
+EXPERIMENT 4
+PROBLEM:
+Design a web page layout consisting of a header, sidebar, main content area, and footer using Cascading Style Sheets (CSS) Flexbox. SOLUTION:
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Layout</title>
+    <style>
+        body{
+            margin:0;
+        }
+
+        .header{
+            background:lightblue;
+            padding:20px;
+            text-align:center;
+        }
+
+        .container{
+            display:flex;
+        }
+
+        .sidebar{
+            background:lightgray;
+            width:30%;
+            padding:20px;
+        }
+
+        .content{
+            background:white;
+            width:70%;
+            padding:20px;
+        }
+
+        .footer{
+            background:lightblue;
+            padding:20px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Menu Items</p>
+        </div>
+
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>This is the main content area.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+
+</body>
+</html>
+
+==================================================
+EXPERIMENT 5
+PROBLEM:
+Design a horizontal navigation menu using HTML and CSS and apply transition and animation effects such as color change, zoom effect, and animated underline on hover.
+SOLUTION:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Menu</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+        ul{
+            list-style: none;
+            background: #333;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        ul li{
+            padding: 15px 20px;
+        }
+
+        ul li a{
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Color Change and Zoom Effect */
+        ul li a:hover{
+            color: yellow;
+            transform: scale(1.2);
+        }
+
+        /* Animated Underline */
+        ul li a::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: yellow;
+            transition: width 0.3s;
+        }
+
+        ul li a:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+</body>
+</html>
+
+==================================================
+EXPERIMENT 6
+PROBLEM:
+Create a web page that demonstrates a CSS animation where a 100px × 100px red square changes its background color from red to yellow over 4 seconds using the @keyframes rule. 
+SOLUTION:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Animation</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: colorChange 4s;
+        }
+
+        @keyframes colorChange {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Animation Example</h2>
+
+    <div class="box"></div>
+
+</body>
+</html>
+==================================================
+EXPERIMENT 7
+PROBLEM:
+Create a web page that demonstrates a CSS transition where a 100px × 100px red square smoothly expands its width from 100px to 300px when the user hovers over it using the transition property. .
+
+SOLUTION:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box{
+    width:100px;
+    height:100px;
+    background:red;
+    transition: width 1s;
+}
+
+.box:hover{
+    width:300px;
+}
+</style>
+</head>
+<body>
+
+<div class="box"></div>
+
+</body>
+</html>
+
+==================================================
+EXPERIMENT 8
+PROBLEM:
+Develop a program demonstrating input form validation.
+
+SOLUTION:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+
+    <form>
+        Name:
+        <input type="text" name="name" required>
+        <br><br>
+
+        Email:
+        <input type="email" name="email" required>
+        <br><br>
+
+        Password:
+        <input type="password" name="password" minlength="6" required>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+==================================================
+EXPERIMENT 9
+PROBLEM:
+Design a photo gallery that displays a large image and multiple small images (thumbnails).
+
+SOLUTION:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Gallery</title>
+    <style>
+        .gallery {
+            text-align: center;
+        }
+
+        .large-img {
+            width: 400px;
+            height: 250px;
+            border: 2px solid black;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 70px;
+            margin: 5px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gallery">
+        <h2>Photo Gallery</h2>
+
+        <!-- Large Image -->
+        <img src="https://via.placeholder.com/400x250" class="large-img" alt="Large Image">
+
+        <br><br>
+
+        <!-- Thumbnails -->
+        <img src="https://via.placeholder.com/100x70" class="thumbnail" alt="Thumbnail 1">
+        <img src="https://via.placeholder.com/100x70" class="thumbnail" alt="Thumbnail 2">
+        <img src="https://via.placeholder.com/100x70" class="thumbnail" alt="Thumbnail 3">
+        <img src="https://via.placeholder.com/100x70" class="thumbnail" alt="Thumbnail 4">
+    </div>
+
+</body>
+</html>
+
+==================================================
+END OF PRACTICAL FILE
